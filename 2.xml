@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<university>
+
+<student> 
+	<fio>Шевцов Дмитрий</fio>
+	<year>1994</year>
+	<month>4</month>
+	<day>19</day>
+	<course>3</course>
+</student> 
+
+<student> 
+	<fio>новый студент 1</fio>
+	<year>1995</year>
+	<month>4</month>
+	<day>19</day>
+	<course>3</course>
+</student> 
+
+<student> 
+	<fio>новый студент 2</fio>
+	<year>1994</year>
+	<month>4</month>
+	<day>19</day>
+	<course>3</course>
+</student> 
+
+</university>

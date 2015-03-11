@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<application>
+
+<class name = "MainClass"> 
+
+</class> 
+
+<class name = "Window">
+
+<method name = "main"/>
+
+<method name1 = "open"/>
+
+<comment> test comment for window </comment>
+
+<method name = "close"/>
+
+<method name = "show"/>
+
+<method name = "hide"/>
+
+</class> 
+
+<class name = "DataBase">
+
+<method name = "connect"/>
+
+<method name = "disconnect"/>
+
+<comment> test comment for Database </comment>
+
+<method name = "getData"/>
+
+</class> 
+
+</application>
