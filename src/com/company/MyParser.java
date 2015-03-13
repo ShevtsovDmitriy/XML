@@ -26,9 +26,9 @@ public class MyParser extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName,Attributes attributes) throws SAXException {
-        System.out.println("Тег: "+qName);
-        if(qName.equals("class"))
-            System.out.println("класс"+attributes.getValue("name"));
+        //System.out.println("Тег: "+qName);
+        //if(qName.equals("class"))
+            //System.out.println("класс"+attributes.getValue("name"));
 
         if (isStudent)
             currentName = qName;
@@ -44,12 +44,12 @@ public class MyParser extends DefaultHandler {
         char[] buf = new char[length];
         int j = 0;
         for(int i=start;i< start+length;++i) {
-            System.out.print(c[i]);
+            //System.out.print(c[i]);
             buf[j] = c[i];
             j++;
         }
         String val = new String(buf);
-        System.out.print("...val is " + val + currentName + "...");
+        //System.out.print("...val is " + val + currentName + "...");
         student.put(currentName, val);
         currentName = "added";
 
@@ -59,7 +59,7 @@ public class MyParser extends DefaultHandler {
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        System.out.println("Тег разобран: "+qName);
+        //System.out.println("Тег разобран: "+qName);
         if (qName == "student") {
             isStudent = false;
             addStud();
@@ -68,14 +68,14 @@ public class MyParser extends DefaultHandler {
 
     @Override
     public void startDocument() throws SAXException {
-        System.out.println("Начало разбора документа!");
+        //System.out.println("Начало разбора документа!");
         super.startDocument();
     }
 
     @Override
     public void endDocument() throws SAXException {
         super.endDocument();
-        System.out.println("Разбор документа окончен!");
+        //System.out.println("Разбор документа окончен!");
     }
 
     private void addStud(){

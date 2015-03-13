@@ -23,8 +23,7 @@ import java.io.FileOutputStream;
 public class DocumentBilder {
 
     public static void createDoc(){
-        DocumentBuilderFactory f =
-                DocumentBuilderFactory.newInstance();
+        DocumentBuilderFactory f = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = null;
         try {
             builder = f.newDocumentBuilder();

@@ -1,5 +1,8 @@
 package com.company;
 
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -15,6 +18,18 @@ public class Student {
         this.fio = fio;
         this.birthDay = birthDay;
         this.course = course;
+    }
+
+    public Student(String fio, String birthDay, int course) {
+        this.fio = fio;
+        this.course = course;
+        SimpleDateFormat format = new SimpleDateFormat("dd MM yyyy");
+        try {
+            this.birthDay = format.parse(birthDay);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public Student(String fio) {
