@@ -20,47 +20,6 @@ public class Main {
     public static  DOMHelper helper;
 
     public static void main(String[] args) {
-/*
-        SAXParserFactory factory = SAXParserFactory.newInstance();
-        SAXParser parser;
-        InputStream xmlData= null;
-        ArrayList<Student> students = null;
-        try {
-            xmlData= new FileInputStream("2.xml");
-            parser = factory.newSAXParser();
-            MyParser myParser = new MyParser();
-            parser.parse(xmlData, myParser);
-            students = myParser.students;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-/*
-        DOMHelper helper = new DOMHelper();
-        SimpleDateFormat format = new SimpleDateFormat("dd MM yyyy");
-        Date date = null;
-        try {
-            date = format.parse("19 04 1994");
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        Student st = new Student("Новый студент", date, 3);
-        helper.addNew(st);
-
-
-        DOMHelper helper = new DOMHelper();
-        ArrayList<Student> st = helper.getAllObjects();
-        for (Student stud: st){
-            System.out.print(stud.getFio());
-        }
-
-*/
         helper = new DOMHelper();
         java.util.Scanner scanner = new java.util.Scanner(System.in);
         System.out.println("Введите действие");

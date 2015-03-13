@@ -15,9 +15,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-/**
- * Created by Дмитрий on 13.03.2015.
- */
+
 public class DOMHelper implements XMLHelper {
 
     private File file;
@@ -49,7 +47,7 @@ public class DOMHelper implements XMLHelper {
         }
         else {
                 DocumentBuilderFactory f = DocumentBuilderFactory.newInstance();
-                DocumentBuilder builder = null;
+                DocumentBuilder builder;
 
                 try {
                     builder = f.newDocumentBuilder();
@@ -103,8 +101,7 @@ public class DOMHelper implements XMLHelper {
         month.appendChild(monthText);
         day.appendChild(dayText);
 
-        Transformer t =
-                null;
+        Transformer t;
         try {
             t = TransformerFactory.newInstance().newTransformer();
             t.transform(new DOMSource(doc), new StreamResult(new FileOutputStream(file)));
@@ -124,7 +121,7 @@ public class DOMHelper implements XMLHelper {
         ArrayList<Student> result = new ArrayList<Student>();
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser;
-        InputStream xmlData= null;
+        InputStream xmlData;
         try {
             xmlData= new FileInputStream("dom.xml");
             parser = factory.newSAXParser();

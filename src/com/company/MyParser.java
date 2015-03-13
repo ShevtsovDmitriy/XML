@@ -9,11 +9,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 
-/**
- * Created by Дмитрий on 11.03.2015.
- */
+
 public class MyParser extends DefaultHandler {
 
     private HashMap<String, String> student = new HashMap<String, String>();
@@ -60,7 +57,7 @@ public class MyParser extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
         //System.out.println("Тег разобран: "+qName);
-        if (qName == "student") {
+        if (qName.equals("student")) {
             isStudent = false;
             addStud();
         }

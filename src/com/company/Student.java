@@ -5,9 +5,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created by Дмитрий on 11.03.2015.
- */
+
 public class Student {
 
     private String fio;
