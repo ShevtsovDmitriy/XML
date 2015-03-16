@@ -41,14 +41,14 @@ public class JAXBHelper implements XMLHelper {
         ArrayList<Student> students = getAllObjects();
         students.add(src);
         try {
-            JAXBContext jc = JAXBContext.newInstance(Student.class);
+            JAXBContext jc = JAXBContext.newInstance(Group.class);
             Marshaller m = jc.createMarshaller();
 
 
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-
-            m.marshal(new Group(students), file);
+            Group gr = new Group(students);
+            m.marshal(gr, file);
 
 
         } catch (JAXBException e) {
@@ -60,7 +60,7 @@ public class JAXBHelper implements XMLHelper {
     public ArrayList<Student> getAllObjects() {
         ArrayList<Student> result = new ArrayList<Student>();
         try {
-            JAXBContext jc = JAXBContext.newInstance(Student.class);
+            JAXBContext jc = JAXBContext.newInstance(Group.class);
             Unmarshaller um = jc.createUnmarshaller();
             Group gr;
             if (file.length() != 0) {

@@ -17,6 +17,9 @@ public class Group {
     @XmlElement(name = "student")
     private ArrayList<Student> students;
 
+    public Group(){
+
+    }
     public Group(ArrayList<Student> students) {
         this.students = students;
     }

@@ -6,17 +6,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder= {
-        "fio",
-        "birthDay",
-        "course"
-})
-
-@XmlRootElement(name = "student")
 public class Student {
 
-    @XmlElement(required = true)
     private String fio;
     private Date birthDay;
     private int course;
