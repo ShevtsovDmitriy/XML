@@ -1,16 +1,28 @@
 package com.company;
 
 
+import javax.xml.bind.annotation.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder= {
+        "fio",
+        "birthDay",
+        "course"
+})
 
+@XmlRootElement(name = "student")
 public class Student {
 
+    @XmlElement(required = true)
     private String fio;
     private Date birthDay;
     private int course;
+
+    public Student() {
+    }
 
     public Student(String fio, Date birthDay, int course) {
         this.fio = fio;

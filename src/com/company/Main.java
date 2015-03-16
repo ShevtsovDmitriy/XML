@@ -17,10 +17,10 @@ import java.util.Date;
 
 public class Main {
 
-    public static  DOMHelper helper;
+    public static  XMLHelper helper;
 
     public static void main(String[] args) {
-        helper = new DOMHelper();
+        helper = new JAXBHelper();
         java.util.Scanner scanner = new java.util.Scanner(System.in);
         System.out.println("Введите действие");
         while (true){
